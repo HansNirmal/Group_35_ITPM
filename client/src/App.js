@@ -6,10 +6,13 @@ import Navbar from './Components/Navbar';
 //import Happy from './Pages/Happy';
 import VolunteerDeliveryAccept from './Pages/Volunteer/VolunteerDeliveryAccept';
 import VolunteerMgmt from './Pages/Volunteer/VolunteerMgmt';
+import VolunteerHome from './Pages/Volunteer/VolunteerHomePage'
 import FoodAidRequest from './Pages/Organization/FoodAidRequestPage';
 import OrganizationMgmt from './Pages/Organization/OrganizationMgmtPage';
+import OrganizationHome from './Pages/Organization/OrganizationHomePage';
 import DonorAcceptRequest from './Pages/Donor/DonorAcceptRequestPage';
 import DonorMgmt from './Pages/Donor/DonorMgmtPage';
+import DonorHome from './Pages/Donor/DonorHomePage';
 // import FoodAidRequest from './Pages/Organization/FoodAidRequestPage';
 
 function App() {
@@ -28,6 +31,10 @@ function App() {
                   element={<VolunteerMgmt/>}
                 />
                 <Route
+                  path="/volunteer-home"
+                  element={<VolunteerHome/>}
+                />
+                <Route
                   path="/foodaidrequest"
                   element={<FoodAidRequest/>}
                 />
@@ -36,12 +43,20 @@ function App() {
                   element={<OrganizationMgmt/>}
                 />
                 <Route
+                  path="/organization-home"
+                  element={<OrganizationHome/>}
+                />
+                <Route
                   path="/donor-accept-request"
                   element={<DonorAcceptRequest/>}
                 />
                 <Route
-                  path="/"
+                  path="/donor-mgmt"
                   element={<DonorMgmt/>}
+                />
+                <Route
+                  path="/donor-home"
+                  element={<DonorHome/>}
                 />
             </Routes>
         </div>

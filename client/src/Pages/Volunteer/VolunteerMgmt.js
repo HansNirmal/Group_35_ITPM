@@ -193,8 +193,11 @@ const updateDeliveryJob = async (e) => {
 };
 
 return (
-    <div className="home">
+  <div><h2 id="page-title">Volunteer Job Management</h2>
+    <div className="home ">
+      
         <div className="workouts">
+        <h3>Accepted Volunteer Jobs</h3>
           {volunteerJobs && volunteerJobs.map(volunteerJob => (
             <div className="workout-details" key={volunteerJob._id}>
                 <h4>{volunteerJob.requestTitle}</h4>
@@ -265,6 +268,7 @@ return (
       <button>Update Delivery Job</button>
     </form>
         
+    </div>
     </div>
         )
 
