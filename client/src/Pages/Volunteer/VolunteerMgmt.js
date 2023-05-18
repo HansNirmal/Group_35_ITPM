@@ -39,6 +39,10 @@ useEffect(() =>{
     fetchVolunteerJobs();
 },[]);
 
+useEffect(() => {
+  console.log(updateDelivery);
+}, [updateDelivery]);
+
 // Function to fetch Delivery Jobs of a Single Volunteer
 const fetchVolunteerJobs = async () => {
 

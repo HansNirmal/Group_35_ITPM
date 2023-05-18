@@ -8,7 +8,8 @@ import VolunteerDeliveryAccept from './Pages/Volunteer/VolunteerDeliveryAccept';
 import VolunteerMgmt from './Pages/Volunteer/VolunteerMgmt';
 import FoodAidRequest from './Pages/Organization/FoodAidRequestPage';
 import OrganizationMgmt from './Pages/Organization/OrganizationMgmtPage';
-
+import DonorAcceptRequest from './Pages/Donor/DonorAcceptRequestPage';
+import DonorMgmt from './Pages/Donor/DonorMgmtPage';
 // import FoodAidRequest from './Pages/Organization/FoodAidRequestPage';
 
 function App() {
@@ -31,8 +32,16 @@ function App() {
                   element={<FoodAidRequest/>}
                 />
                 <Route
-                  path="/"
+                  path="/organization-mgmt"
                   element={<OrganizationMgmt/>}
+                />
+                <Route
+                  path="/donor-accept-request"
+                  element={<DonorAcceptRequest/>}
+                />
+                <Route
+                  path="/"
+                  element={<DonorMgmt/>}
                 />
             </Routes>
         </div>

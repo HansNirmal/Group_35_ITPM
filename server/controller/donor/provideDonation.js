@@ -10,6 +10,14 @@ const getProvideDonations = async (req, res) => {
 
 }
 
+// get all Volunteer Deliver Jobs
+const getDonorSelfDelivery = async (req, res) => {
+    const OrgJob = await OrgAidRequest.find({"deliveryMethod": "self-delivery"}).sort({ createdAt: -1 })
+
+    res.status(200).json(OrgJob)
+
+}
+
 
 // get all Volunteer Deliver Jobs
 const getDonorVolunteerDelivery = async (req, res) => {
@@ -95,5 +103,6 @@ module.exports = {
     createProvideDonation,
     deleteProvideDonation,
     updateProvideDonation,
+    getDonorSelfDelivery,
     getDonorVolunteerDelivery
 }

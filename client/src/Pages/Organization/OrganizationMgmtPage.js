@@ -44,6 +44,10 @@ useEffect(() => {
   fetchOngoingDeliveries();
 }, []);
 
+useEffect(() => {
+  console.log(updateFoodAidRequests);
+}, [updateFoodAidRequests]);
+
 //Function to fetch Food Aid Requests
 
 const fetchFoodAidRequests = async () => {

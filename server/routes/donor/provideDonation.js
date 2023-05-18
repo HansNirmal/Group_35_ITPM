@@ -6,6 +6,7 @@ const {
     createProvideDonation,
     deleteProvideDonation,
     updateProvideDonation,
+    getDonorSelfDelivery,
     getDonorVolunteerDelivery
 } = require('../../controller/donor/provideDonation')
 
@@ -13,6 +14,10 @@ const {
 const suburl = "provideDonation"
 //Get all Org jobs
 router.get('/',getProvideDonations) 
+
+//Get all self-delivery donations
+router.get('/self-delivery/',getDonorSelfDelivery)
+
 
 //Get all volunteer jobs
 router.get('/volunteer-delivery/',getDonorVolunteerDelivery)

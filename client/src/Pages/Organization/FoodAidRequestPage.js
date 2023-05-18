@@ -11,7 +11,7 @@
 // display an alert saying “Food Aid Request Created”
 // Clear form field states
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from "axios";
 
 //create states for form
@@ -31,6 +31,11 @@ function FoodAidRequest() {
         orgOtherDetails:"",
         orgLocation:""
     })
+
+
+    useEffect(() => {
+      console.log(formDetails);
+    }, [formDetails]);
     
     
     //Handle Update Field Change
