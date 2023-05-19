@@ -91,6 +91,8 @@ const response = await axios.delete(`http://localhost:4000/org/${_id}`)
 
 if (response) {
 
+  console.log(response);
+  alert("Food Aid Request Successfully Deleted");
   fetchFoodAidRequests();
 
 }
@@ -105,6 +107,7 @@ const deleteSelfDelivery = async (_id) =>{
 
 if (response) {
   console.log(response);
+  alert("Donation Successfully Deleted");
   fetchOngoingDonations();
 
 }
@@ -118,6 +121,7 @@ const deleteVolunteerDelivery = async (_id) =>{
 
 if (response) {
   console.log(response)
+  alert("Donation Successfully Deleted");
   fetchOngoingDeliveries();
 
 }
@@ -388,6 +392,7 @@ return(
       name="requestTitle"
       onChange={handleUpdateFieldChange}
       value={updateFoodAidRequests.requestTitle}
+      required
     />
 
     <label>Population</label>
@@ -396,6 +401,7 @@ return(
       name="population"
       onChange={handleUpdateFieldChange}
       value={updateFoodAidRequests.population}
+      required
     />
 
     <label>Telephone No.</label>
@@ -403,7 +409,8 @@ return(
       type="number"
       name="orgTelephone" 
       onChange={handleUpdateFieldChange}
-      value={updateFoodAidRequests.orgTelephone}  
+      value={updateFoodAidRequests.orgTelephone}
+      required  
     />
 
     <label>Due Date</label>
@@ -412,6 +419,7 @@ return(
       name="dueDate"
       onChange={handleUpdateFieldChange}
       value={updateFoodAidRequests.dueDate}
+      required
     />
 
     <div>
@@ -422,6 +430,7 @@ return(
       name="orgOtherDetails"
       onChange={handleUpdateFieldChange}
       value={updateFoodAidRequests.orgOtherDetails}
+      required
       />
     </div>
 
@@ -431,6 +440,7 @@ return(
     name="orgLocation"
     onChange={handleUpdateFieldChange}
     value={updateFoodAidRequests.orgLocation}
+    required
     />
 
     <button>Update Food Aid Request</button>

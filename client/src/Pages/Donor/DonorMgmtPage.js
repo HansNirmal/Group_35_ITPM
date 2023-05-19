@@ -108,6 +108,8 @@ const toggleDeclineDelivery = async (delivery) => {
 
      if (response) {
 
+        console.log(response);
+        alert("Donation Deleted");
         fetchSelfDeliveryDonations();
         fetchVolunteerDeliveryDonations();
      }
@@ -150,7 +152,8 @@ const toggleDeclineVolunteerDelivery = async (delivery) => {
      //Update the Donation Lists
 
      if (response) {
-
+        console.log(response);
+        alert("Donation Deleted");
         fetchAcceptedVolunteerDeliveryDonations();
      }
      
@@ -225,6 +228,8 @@ const updateDonationRecord = async (e) => {
       //Update the Delivery Jobs List
 
       if(response){
+        console.log(response);
+        alert("Donation Details Updated")
         fetchSelfDeliveryDonations();
         fetchVolunteerDeliveryDonations();
   
@@ -339,6 +344,7 @@ return (
                 name="donorName" 
                 onChange={handleUpdateFieldChange}
                 value={updateDonation.donorName}
+                required
                 />
 
                 <div className="select-div">
@@ -349,6 +355,7 @@ return (
                         name="donationSize"
                         onChange={handleUpdateFieldChange}
                         value={updateDonation.donationSize}
+                        required
                         >
                         <option value="">Size</option>
                         <option value="small">Small</option>
@@ -365,6 +372,7 @@ return (
                         name="deliveryMethod"
                         onChange={handleUpdateFieldChange}
                         value={updateDonation.deliveryMethod}
+                        required
                         >
                         <option value="">Method</option>
                         <option value="self-delivery">Self-Delivery</option>
@@ -378,6 +386,7 @@ return (
                 name="donorTelephone"
                 onChange={handleUpdateFieldChange}
                 value={updateDonation.donorTelephone}
+                required
                 />
 
                 <div>
@@ -388,6 +397,7 @@ return (
                 name="donorOtherDetails"
                 onChange={handleUpdateFieldChange}
                 value={updateDonation.donorOtherDetails}
+                required
                 />
                 </div>
 
@@ -397,6 +407,7 @@ return (
                 name="donorLocation"
                 onChange={handleUpdateFieldChange}
                 value={updateDonation.donorLocation}
+                required
                 />
 
                 <button>Update Donation</button>

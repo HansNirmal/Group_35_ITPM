@@ -105,6 +105,7 @@ function FoodAidRequest() {
               name="requestTitle"
                 onChange={handleAddFieldChange}
               value={formDetails.requestTitle}
+              required
             />
           </div>
           <div className="form-inputs">
@@ -114,6 +115,7 @@ function FoodAidRequest() {
               name="population"
               onChange={handleAddFieldChange}
               value={formDetails.population}
+              required
             />
           </div>
           <div className="form-inputs">
@@ -123,6 +125,7 @@ function FoodAidRequest() {
               name="orgTelephone"
             onChange={handleAddFieldChange}
             value={formDetails.orgTelephone}
+            required
             />
           </div>
           <div className="form-inputs">
@@ -132,6 +135,7 @@ function FoodAidRequest() {
               name="dueDate"
             onChange={handleAddFieldChange}
             value={formDetails.dueDate}
+            required
             />
           </div>
         </div>
@@ -143,6 +147,7 @@ function FoodAidRequest() {
             name="orgOtherDetails"
             onChange={handleAddFieldChange}
             value={formDetails.orgOtherDetails}
+            required
           />
         </div>
         <div>
@@ -152,6 +157,7 @@ function FoodAidRequest() {
             name="orgLocation"
             onChange={handleAddFieldChange}
             value={formDetails.orgLocation}
+            required
           />
         </div>
 

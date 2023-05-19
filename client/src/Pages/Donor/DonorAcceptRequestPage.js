@@ -124,6 +124,7 @@ const createDonation = async (e) => {
         if(deleteResponse){
             
             //Refresh Delivery Requests List
+            alert("Donation Created Successfully")
             fetchFoodAidRequests();
 
             //Clear Details From State
@@ -193,6 +194,7 @@ return(
             name="donorName" 
             onChange={handleAddFieldChange}
             value={foodAidRequestAccept.donorName}
+            required
             />
 
             <div className="select-div">
@@ -203,6 +205,7 @@ return(
                     name="donationSize"
                     onChange={handleAddFieldChange}
                     value={foodAidRequestAccept.donationSize}
+                    required
                     >
                     <option value="">Size</option>
                     <option value="small">Small</option>
@@ -218,10 +221,12 @@ return(
                     id="delivery-method"
                     name="deliveryMethod"
                     onChange={handleAddFieldChange}
-                    value={foodAidRequestAccept.deliveryMethod}>
+                    value={foodAidRequestAccept.deliveryMethod}
+                    required>
                 <option value="">Method</option>
                 <option value="self-delivery">Self-Delivery</option>
                 <option value="volunteer-delivery">Volunteer-Delivery</option>
+                
                 </select>
             </div>
     
@@ -231,6 +236,7 @@ return(
             name="donorTelephone"
             onChange={handleAddFieldChange}
             value={foodAidRequestAccept.donorTelephone}
+            required
             />
 
             <div>
@@ -240,6 +246,7 @@ return(
             name="donorOtherDetails"
             onChange={handleAddFieldChange}
             value={foodAidRequestAccept.donorOtherDetails}
+            required
             />
             </div>
 
@@ -249,6 +256,7 @@ return(
             name="donorLocation"
             onChange={handleAddFieldChange}  
             value={foodAidRequestAccept.donorLocation}
+            required
             />
 
             <button>Donate</button>
